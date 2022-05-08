@@ -9,6 +9,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+header {
+  max-height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-gap: 1.5em;
+  background-color: #94a3b8;
+}
+.navbar-option h5 {
+  font-size: 1.54em;
+  padding: 0;
+}
 section {
   width: 100%;
   min-height: 70vh;
@@ -23,22 +35,18 @@ section {
 .blurb-wrapper h1 {
   font-size: 7rem;
   margin: 0;
-  align-self: flex-start;
 }
 .blurb-wrapper h2 {
   margin: 0;
   font-size: 2em;
   margin-left: 0.4em;
   margin-top: -0.5em;
-  align-self: flex-start;
 }
-.blurb-wrapper ul {
-  font-size: 1.2em;
-  max-width: 90%;
-  align-self: flex-start;
-}
-.blurb-wrapper li {
-  white-space: normal;
+
+.blurb-wrapper p {
+  margin-left: 0.4em;
+  font-size: 1.3em;
+  max-width: 50%;
 }
 .blurb-wrapper {
   display: flex;
@@ -50,7 +58,7 @@ section {
   margin-bottom: 13em;
 }
 .getstarted-button {
-  width: 50%;
+  width: 20%;
   height: 2.3em;
   background: rgb(52, 211, 153);
   background: linear-gradient(
@@ -67,7 +75,7 @@ section {
   border-radius: 3rem;
 }
 .getstarted-button:hover {
-  font-size: 1.7rem;
+  width: 25%;
 }
 .tooltip-wrapper {
   font-size: 1.3rem;
@@ -106,13 +114,18 @@ section {
 .footer {
   min-height: 20vh;
   background-color: #6b7280;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
 }
 .fourth-section-wrapper {
   min-height: 30vh;
-  padding: 2em;
+  max-width: 100%;
 }
 .fourth-section-wrapper h1 {
   font-size: 3rem;
+  max-width: 100%;
+  margin: 0;
 }
 .fourth-section-wrapper h2 {
   font-weight: 500;
@@ -121,6 +134,7 @@ section {
   font-weight: 200;
   text-decoration: underline;
   color: inherit;
+  max-width: 100%;
 }
 .fourth-section-wrapper a:hover {
   color: darkcyan;

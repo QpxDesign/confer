@@ -9,16 +9,26 @@ function App() {
   const secondSectionRef = useRef(null);
   return (
     <div className="app">
+      <header>
+        <div className="navbar-option">
+          <h5>About Us</h5>
+        </div>
+        <div className="navbar-option">
+          <h5>Support</h5>
+        </div>
+        <div className="navbar-option">
+          <h5>Contact</h5>
+        </div>
+      </header>
       <section className="first-section-wrapper">
         <div className="blurb-wrapper">
           <h1>Confer</h1>
           <h2>Office Smarter</h2>
-          <ul>
-            <li>Magically manage coworking spaces</li>
-            <li>Find free spaces in seconds</li>
-            <li>Detailed analytics of space-usage</li>
-            <li>Keep track of office equipment</li>
-          </ul>
+          <p>
+            One service to manage your entire office. Reserve conference rooms,
+            keep track of office equipment, and more. Get started for free
+            today.
+          </p>
           <button className="getstarted-button">Get Started</button>
         </div>
         <div className="tooltip-wrapper" onClick={() => autoScrolldown()}>
@@ -42,11 +52,11 @@ function App() {
       <section className="fourth-section-wrapper">
         <h1>Questions?</h1>
         <h2>
-          feel free to email us:
+          feel free to email us:{" "}
           <a href="mailto:quinn@qpxdesign.com">quinn@qpxdesign.com</a>
         </h2>
       </section>
-      <section className="footer"></section>
+      <section className="footer">© Copyright 2022 - Confer Inc.</section>
     </div>
   );
 }
