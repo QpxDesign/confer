@@ -10,3 +10,8 @@ Update Local Files from Git Repo (Edit latest version of code)
 git fetch --all
 git reset --hard origin/master 
 ```
+
+Clone Repo into local files 
+```
+git clone "https://github.com/qpxdesign/confer.git"
+```
