@@ -261,3 +261,74 @@ section {
 .back-button:hover {
   background-color: #d2d5d8;
 }
+.uploadmenu-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  aspect-ratio: 3/2;
+  background-color: rgb(212, 212, 216, 1);
+  width: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.uploadmenu-wrapper header {
+  background-color: #9ca3af;
+  display: flex;
+  padding: 1em;
+  justify-content: flex-start;
+}
+.uploadmenu-wrapper header label {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+}
+.uploadmenu-wrapper header button {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  border: none;
+  background-color: #dc2626;
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.dropzone .tooltip {
+  display: flex;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dropzone .icon {
+  transition: 0.5s;
+  font-size: 10rem;
+}
+.dropzone:hover {
+  background-color: #d6d3d1;
+  font-size: 0.8em;
+}
+.dropzone:hover .icon {
+  font-size: 9rem;
+}
+.dropzone input {
+  opacity: 0;
+  cursor: grab;
+  aspect-ratio: none;
+  position: absolute;
+  width: 98%;
+  height: 85%;
+  border: none;
+}

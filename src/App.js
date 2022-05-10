@@ -1,7 +1,7 @@
 import "./App.css";
 import Start from "./pages/Start";
 import Home from "./pages/Home";
-import Create from "./pages/Create"
+import Create from "./pages/Create";
 import {
   BrowserRouter as Router,
   Routes, //replaces "Switch" used till v5
@@ -14,8 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/start" element={<Start />} />
-          <Route path="/create/upload" element={<Create mode={"upload"}/>} />
-          <Route path="/create/designer" element={<Create mode={"designer"}/>} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </Router>
     </div>
