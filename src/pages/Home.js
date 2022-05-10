@@ -1,14 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, Component } from "react";
 import floorplanExample from "./assets/floorplan-example.svg";
 import dashboardExample from "./assets/dashboard-example.svg";
 import { Link } from "react-router-dom";
 
-export default function Home() {
-  function autoScrolldown() {
-    secondSectionRef.current.scrollIntoView({ behavior: "smooth" });
+export default class Start extends Component {
+  constructor(props) {
+    super(props);
+    this.secondSectionRef = React.createRef();
   }
-  const secondSectionRef = useRef(null);
-  return (
+  static autoScrolldown() {
+    this.secondSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+  render() { 
+      return (
     <>
       <header>
         <div className="navbar-options">
@@ -42,22 +46,22 @@ export default function Home() {
               <span>Get Started</span>
             </button>
           </div>
-          <div className="tooltip-wrapper" onClick={() => autoScrolldown()}>
+          <div className="tooltip-wrapper" onClick={() => this.autoScrolldown()}>
             ↓ Scroll
           </div>
         </section>
-        <section className="second-section-wrapper" ref={secondSectionRef}>
+        <section className="second-section-wrapper" ref={this.secondSectionRef}>
           <div className="content-wrapper">
             <h1>Upload a floorplan, and we'll do the rest</h1>
             <p>Don't have one? We'll help you create one in minutes.</p>
-            <img src={floorplanExample} className="image" />
+            <img src={floorplanExample} className="image" alt="example of a floorplan"/>
           </div>
         </section>
         <section className="third-section-wrapper">
           <div className="content-wrapper">
             <h1>Manage the Office all in one place </h1>
             <p>Our dashboard helps you keep track of all your equipment</p>
-            <img src={dashboardExample} className="laptop" />
+            <img src={dashboardExample} className="laptop" alt="example of dashboard tool on Macbook"/>
           </div>
         </section>
         <section className="fourth-section-wrapper">
@@ -71,4 +75,6 @@ export default function Home() {
       </div>
     </>
   );
+}
+
 }

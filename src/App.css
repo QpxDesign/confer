@@ -5,6 +5,10 @@
 body {
   margin: 0;
 }
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -197,7 +201,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 722px) {
+@media screen and (max-width: 750px) {
   .vl {
     display: none;
   }
@@ -219,6 +223,7 @@ section {
   padding: 1em;
   transition: 0.5s;
   border-radius: 0.3em;
+  cursor: pointer;
 }
 .choice:hover {
   padding: 1;
@@ -237,4 +242,22 @@ section {
 .choice .icon {
   transition: 0.5s;
   font-size: 6rem;
+}
+.back-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  font-size: 1.3em;
+  padding: 1em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.back-button .icon {
+  font-size: 1.6em;
+}
+.back-button:hover {
+  background-color: #d2d5d8;
 }
